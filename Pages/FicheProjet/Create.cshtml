@@ -1,4 +1,109 @@
 ﻿@page
-@model projetPromamec.Pages.FicheProjet.CreateModel
-@{
-}
+@model projetPromamec.Pages.FicheProjet.CreateProjectModel
+
+<h2>Nouvelle Fiche Projet</h2>
+
+<form method="post" class="fiche-form">
+    <div>
+        <label>Client:</label>
+        <input type="text" name="Client" required />
+    </div>
+    <div>
+        <label>Ville:</label>
+        <input type="text" name="Ville" required />
+    </div>
+    <div>
+        <label>Objet:</label>
+        <input type="text" name="Objet" required />
+    </div>
+    <div>
+        <label>Ao / Marché:</label>
+        <input type="text" name="Marche" />
+    </div>
+    <div>
+        <label>Email Responsable:</label>
+        <input type="email" name="EmailResponsable" required />
+    </div>
+    <div>
+        <label>Equipement:</label>
+        <textarea name="Equipement"></textarea>
+    </div>
+    <div>
+        <label>Autres Fournisseurs et prestations locales:</label>
+        <textarea name="FournisseursLocaux"></textarea>
+    </div>
+    <div>
+        <label>Budget:</label>
+        <input type="text" name="Budget" />
+    </div>
+    <div>
+        <label>Commande Effectuée:</label>
+        <label><input type="radio" name="CommandeEffectuee" value="Oui" /> Oui</label>
+        <label><input type="radio" name="CommandeEffectuee" value="Non" /> Non</label>
+    </div>
+    <div>
+        <label>Date prévisionnelle de livraison:</label>
+        <input type="date" name="DateLivraison" />
+    </div>
+    <div>
+        <label>Date limite d'exécution:</label>
+        <input type="date" name="DateLimiteExecution" />
+    </div>
+    <div>
+        <label>Conditions Particulières:</label>
+        <textarea name="ConditionsParticulieres"></textarea>
+    </div>
+    <div>
+        <label>Contact divers:</label>
+        <textarea name="ContactDivers"></textarea>
+    </div>
+    <div>
+        <label>Dossier AMSSNUR requis:</label>
+        <label><input type="radio" name="DossierAMSSNUR" value="Oui" /> Oui</label>
+        <label><input type="radio" name="DossierAMSSNUR" value="Non" /> Non</label>
+    </div>
+    <br />
+    <button type="submit">Enregistrer</button>
+    <button type="button" onclick="window.print()">Imprimer</button>
+</form>
+
+<style>
+    .fiche-form {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        font-family: Arial, sans-serif;
+    }
+    .fiche-form div {
+        margin-bottom: 15px;
+    }
+    .fiche-form label {
+        display: block;
+        font-weight: bold;
+    }
+    .fiche-form input[type="text"],
+    .fiche-form input[type="email"],
+    .fiche-form input[type="date"],
+    .fiche-form textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .fiche-form button {
+        margin-right: 10px;
+        padding: 10px 20px;
+        background-color: #0066cc;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .fiche-form button:hover {
+        background-color: #004a99;
+    }
+</style>

@@ -25,7 +25,7 @@ namespace projetPromamec.Pages.FicheProjet
 
         public void OnGet()
         {
-            // Exemple de données fictives, à remplacer par vos données réelles
+           
             Projects = new List<ProjectViewModel>
             {
                 new ProjectViewModel { Id = 1, ProjectNumber = "PRJ001", ClientName = "Client A", ProjectDate = DateTime.Now },
